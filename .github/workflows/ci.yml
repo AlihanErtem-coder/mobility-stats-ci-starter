@@ -5,6 +5,7 @@ name: Python CI
 permissions:
   contents: read
 jobs:
+  runs-on: ubuntu-latest
   quality:
     strategy:
       fail-fast: false
@@ -12,7 +13,6 @@ jobs:
         python-version:
           - "3.12"
           - "3.13"
-  runs-on: ubuntu-latest
   steps:
     - name: Check out repository
       uses: actions/checkout@v7
